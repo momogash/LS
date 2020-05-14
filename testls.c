@@ -25,7 +25,7 @@ int		main(int argc, char *argv[])
 	i = 0;
 	if (argc == 1)
 	{
-		no_flag(str, flag);
+		no_flag(str, flag);  
 	}
 	delete(str);
 	return (0);

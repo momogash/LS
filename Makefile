@@ -38,10 +38,12 @@ $(OBJ): %.o: %.c
 	echo "Objects created"
 
 clean:
+	make -C libft clean
 	rm -rf *.o
 	echo "Objects deleted"
 
 fclean: clean
+	make -C libft clean
 	rm -rf $(NAME)
 	echo "$(NAME) Deleted"
 
