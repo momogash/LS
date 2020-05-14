@@ -9,9 +9,8 @@ flags *process_flag(void)
 	flag->a = '0';
 	flag->l = '0';
 	flag->t = '0';
-	flag->r = '0';
 	flag->R = '0';
-	flag->a = '0';
+	flag->r = '0';
 	flag->err = '0';
 	flag->active = '0';
 	return (flag);

@@ -12,6 +12,7 @@ char   **read_flag_input(char **str, int count)
 
     temp = (char **)malloc(sizeof(char *) * count * (256 * 256));
     
+    //256 is an equivelant of 1 octant = 8 bits
 	//dynamically allocating memory in the heap for flap pointer of type flags
     while (str[i] != NULL)
     {

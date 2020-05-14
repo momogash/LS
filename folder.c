@@ -26,22 +26,22 @@ void  folder_open_error(char **newstr, char *str)
   } 
 }
 
-char  **folder(char **newstr, flags *flag, char **str)
+char  **folder(char **temp, flags *flag, char **str)
 {
   DIR   *folder;
 
-  newstr = (char **)malloc(sizeof(char *) * read_bytes(str[0] + 1));
+  temp = (char **)malloc(sizeof(char *) * read_bytes(str[0]) + 1);
 
   if (!(folder = opendir(*str))) //if unable to open the specified directory name and return pointer to that folder
-      folder_open_error(newstr, *str);
+      folder_open_error(temp, *str);
 
   //!!!! FT PROTECTOR TO BE DONE
 
   if(folder) //there is an opened dir?
   {
     closedir(folder);
-    open_read_folder(newstr, flag, str);
+    open_read_folder(temp, flag, str);
   }
-  open_read_folder_flag(newstr, flag, str);
-  return (newstr);
+  open_read_folder_flag(temp, flag, str);
+  return (temp);
 }
