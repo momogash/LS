@@ -85,6 +85,6 @@ int usr_details(char *newstr, char *str)
   group(status);
   date_format(status);
   ft_putchar(' ');
-  ft_strdel(&temp);
+  //ft_strdel(&temp);
   return (0); 
 }

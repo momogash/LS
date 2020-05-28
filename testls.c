@@ -28,5 +28,9 @@ int		main(int argc, char *argv[])
 		no_flag(str, flag);  
 	}
 	delete(str);
+	//delete(temp);
+	//free(flag);
+	//sleep(65);
 	return (0);
 }
+
