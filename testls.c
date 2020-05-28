@@ -29,8 +29,8 @@ int		main(int argc, char *argv[])
 	}
 	delete(str);
 	//delete(temp);
-	//free(flag);
-	//sleep(65);
+	free(flag);
+	//sleep(10);
 	return (0);
 }
 

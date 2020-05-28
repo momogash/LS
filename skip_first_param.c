@@ -23,6 +23,7 @@ void  skip_first_param(char **str, flags *flag)
     while (newstr[i] != NULL && flag->l == '0')
       ft_putendl(newstr[i++]);
     j++;
+    delete(newstr);
   }
-  delete(newstr);
+  
 }

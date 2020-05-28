@@ -67,8 +67,9 @@ int usr_details(char *newstr, char *str)
   struct passwd *owner;
   char      *temp;
 
+  temp = NULL;
   if ((ft_strcmp(newstr, str)) == 0)
-    lstat(filepath(newstr, "."), &status); //int lstat(const char *filename, struct stat *buf);
+    lstat(temp = filepath(newstr, "."), &status); //int lstat(const char *filename, struct stat *buf);
   else
     lstat((temp = filepath(newstr, str)), &status);
     //st_nlink = this count keeps track of how many directories have entries for this file
@@ -85,6 +86,6 @@ int usr_details(char *newstr, char *str)
   group(status);
   date_format(status);
   ft_putchar(' ');
-  //ft_strdel(&temp);
+  ft_strdel(&temp);
   return (0); 
 }

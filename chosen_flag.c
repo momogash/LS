@@ -9,6 +9,7 @@ void  chosen_flag(flags *flag, char *str)
     flag->err = '1';
     ft_putstr("wrong flag, please use [-] [altRr]\n");
     ft_putstr(str);
+    free(flag);
     exit(0);
   }
 }
