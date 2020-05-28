@@ -14,8 +14,8 @@ int		main(int argc, char *argv[])
 	flag = process_flag(); //now all the flags are set to '0'
 	str = read_flag_input(argv, argc);
 // //printf("the string printed %s\n",*str);
-	ft_sortit(str); //!!!!!!
-	arrange(str); //!!!!!!!
+	ft_sortit(str); 
+	arrange(str); 
 
 	if(argc >= 2)
 	{
@@ -28,7 +28,7 @@ int		main(int argc, char *argv[])
 		no_flag(str, flag);  
 	}
 	delete(str);
-	//delete(temp);
+	
 	free(flag);
 	//sleep(10);
 	return (0);
